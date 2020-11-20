@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
-<style>
-body
-{
-    padding: 0;
-    margin: 0;
-    background-color: #000;
-    overflow: hidden;
-}
-.basketball
-{
-    width: 100px;
-    position: absolute;
-    animation: play 4s linear infinite alternate;
-}
-@keyframes play
-{
-    0%
-    {
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #000;
+      overflow: hidden;
+    }
+	
+    .basketball {
+      width: 100px;
+      position: absolute;
+
+      animation-name: play; 
+      animation-duration: 8s;
+      animation-play-state: running;
+	  animation-timing-function: linear;
+    }
+	
+    ,basketball:hover {
+       animation: paused;
+       animation-play-state: paused;
+	   cursor: pointer;
+    }
+	
+	@keyframes play {
+      0% {
         top:0vh;
         left: 0px;
         transform: rotate(0deg);
-    }    
-    25%
-    {
+      }    
+      25% {
         top: 90vh;
         left: 25vw;
         transform: rotate(360deg);
-    }    
-    50%
-    {
+      }    
+      50% {
         top: 0vh;
         left: 50vw;
         transform: rotate(0deg);
-    }    
-    75%
-    {
+      }    
+	  75% {
         top: 90vh;
         left: 75vw;
         transform: rotate(360deg);
-    }    
-    100%
-    {
+      }    
+      100% {
         top: 0vh;
         left: 100vw;
         transform: rotate(0deg);
+      }
     }
-}</style>
+  </style>
 <body>
-
   <!--img src="ball.png" class="basketball" alt='basketball play'-->
   <!--svg height="100" width="100" class="basketball">
     <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="orange" />
